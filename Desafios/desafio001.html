@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 01</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            
+            width: 100vw;
+            height: 100dvh;
+
+
+
+        }
+
+        button {
+            width: 180px;
+            height: 180px;
+            border-radius: 5px;
+            border: 1px solid rgba(0, 0, 0, 0.61);
+            cursor: pointer;
+
+        }
+        button:hover{
+            background-color: aqua;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+           
+
+        }
+        h1{
+            position: absolute;
+            font-size: 3rem;
+            padding-top: 20dvh;
+            font-family: Arial, Helvetica, sans-serif
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Desafio das Mensagens</h1>
+
+    <main>
+
+        <button id="button1">
+            <p>Botão 1</p>
+        </button>
+        <button id="button2">
+            <p>Botão 2</p>
+        </button>
+        <button id="button3">
+            <p>Botão 3</p>
+        </button>
+    </main>
+
+    <script>
+        var button1 = document.getElementById(`button1`)
+        button1.addEventListener(`click`, function () {
+            alert('Cliquei na caixa 1!')
+        })
+
+        var button2 = document.getElementById(`button2`)
+        button2.addEventListener(`click`, function () {
+            alert('Cliquei na caixa 2 !')
+        })
+
+        var button3 = document.getElementById(`button3`)
+        button3.addEventListener(`click`, function () {
+            alert('Cliquei na caixa 3 ')
+        })
+
+    </script>
+
+</body>
+
+</html>
