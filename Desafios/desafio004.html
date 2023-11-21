@@ -1,11 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calcular Troco</title>
 </head>
+
 <body>
-    
+
+    <h1>Calculando Troco</h1>
+    <button id="button">
+        <p>Comprar Produto</p>
+    </button>
+
+    <script>
+
+        var button = document.getElementById(`button`)
+        button.addEventListener(`click`, function () {
+            item1 = prompt(`Que produto você está comprando?`)
+            preco = prompt(`Quanto custa ${item1} que você está comprando?`)
+            precopago = prompt(`Qual foi o valor que você deu para pagar o ${item1}?`)
+            if (precopago >= preco) {
+                var troco = parseFloat(precopago - preco)
+                alert(`Você comprou ${item1} que custou R$ ${preco}.\nPagou R$ ${precopago} em dinheiro e vai receber R$ ${troco} de troco.\nVolte Sempre! `)
+            } else {
+                alert('Você não Tem dinheiro suficiente!')
+            }
+
+        })
+    </script>
+
+
+
+
+
+
 </body>
+
 </html>
