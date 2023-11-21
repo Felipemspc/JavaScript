@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de medidas</title>
+</head>
+<body>
+    <h1>Conversor de Medidas</h1>
+
+    <button id="button">
+        <p>Converter</p>
+    </button>
+
+    <p id="novoh2">Clique no botão acima para iniciar.</p>
+
+    <div id="resultado"></div>
+
+    <script>
+        var button = document.getElementById('button');
+        button.addEventListener('click', function () {
+            var distancia = parseFloat(prompt('Digite uma distância em metros(m)'));
+            
+            // Verificar se a entrada é válida
+            if (!isNaN(distancia)) {
+                // Criar um novo elemento para exibir o resultado
+                var resultadoElemento = document.createElement('h2');
+                resultadoElemento.textContent = `A distância de ${distancia} metros, corresponde a...`;
+
+                // Adicionar o novo elemento ao DOM
+                document.getElementById('resultado').innerHTML = ''; // Limpar resultados anteriores
+                document.getElementById('resultado').appendChild(resultadoElemento);
+            } else {
+                alert('Por favor, insira um valor válido.');
+            }
+        });
+    </script>
+</body>
+</html>
