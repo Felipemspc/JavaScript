@@ -37,7 +37,7 @@
         button.addEventListener('click', function () {
             var distancia = parseFloat(prompt('Digite uma distância em metros(m)'));
             var h2 = document.getElementsByTagName('h2')[0]
-            console.log(h2)
+
             h2.setAttribute("class", "visivel")
             h2.textContent = `A distância de ${distancia} metros, corresponde a...`
             var p = document.getElementsByTagName('p')[1]
