@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,12 +11,15 @@
         }
 
         h2.visivel {
-           visibility: visible;
+            visibility: visible;
         }
 
-
+        p {
+            white-space: pre-line;
+        }
     </style>
 </head>
+
 <body>
     <h1>Conversor de Medidas</h1>
 
@@ -25,21 +29,29 @@
     <h2></h2>
     <p>Clique no botão acima para iniciar.</p>
 
-    
+
 
     <script>
-       
+
         var button = document.getElementById('button');
         button.addEventListener('click', function () {
             var distancia = parseFloat(prompt('Digite uma distância em metros(m)'));
-        var  h2 = document.getElementsByTagName('h2')[0]
-        console.log(h2)
-        h2.setAttribute("class", "visivel")
-        h2.textContent = `A distância de ${distancia} metros, corresponde a...`
+            var h2 = document.getElementsByTagName('h2')[0]
+            console.log(h2)
+            h2.setAttribute("class", "visivel")
+            h2.textContent = `A distância de ${distancia} metros, corresponde a...`
+            var p = document.getElementsByTagName('p')[1]
+            p.textContent = `${distancia / 1000} quilometros(Km).
+            ${distancia / 100} hectômetros(Hm).
+            ${distancia / 10} Decâmetros (Dam). 
+            ${distancia * 10} Decímetros (Dm).
+            ${distancia * 100} Centímetros (CM).
+            ${distancia * 1000} Milímetros (Mm).`
 
 
-         });
-       
+        });
+
     </script>
 </body>
+
 </html>
