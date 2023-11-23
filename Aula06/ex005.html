@@ -1,11 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Primeiros Passos com DOM</title>
+    <style>
+        body {
+            background-color: rgb(59, 59, 243);
+            color: white;
+            font: normal 18pt Arial;
+
+
+        }
+    </style>
 </head>
+
 <body>
-    
+
+    <h1>Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <button id="button">
+        clique aqui
+    </button>
+    <div id="msg">Clique acima para começar...</div>
+
+    <script>
+        /* var corpo = window.document.body
+         var p1 = window.document.getElementsByTagName('p')[1]
+         var d = window.document.getElementById('msg')
+         // document.write(p1.innerHTML)
+         // window.alert(p1.innerText)
+         //div.style.color='black'
+         var button = document.getElementById(`button`)
+             button.addEventListener(`click`,function(){
+                 var nome = prompt('Qual seu nome?')
+                 nome = nome[0].toUpperCase()+ nome.slice(1)
+                 d.style.color='antiquewhite'
+                 d.style.padding='10px'
+                 d.innerText=`Olá ${nome}.`
+ 
+             })
+             */
+            //usando queryselector
+             var d = window.document.querySelector(`div#msg`)
+            d.style.color='black'
+
+
+    </script>
+
+
+
 </body>
+
 </html>
