@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solo</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        body{
+
+        body {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -22,50 +24,65 @@
             text-align: center;
 
         }
-        div{
+
+        div {
             padding: 20px;
         }
-        button{
-            
+
+        button {
+
             width: 100px;
             height: 45px;
             border-radius: 50%;
             border: 1px solid black;
             box-shadow: 1px 1px 5px black;
         }
-        
 
+        h2 {
+            visibility: hidden;
+        }
     </style>
 </head>
+
 <body>
     <h1>Teste <strong>SOLO</strong></h1>
 
 
-    
+
     <div>
         <button id="button">
-        
+
             <p>iniciar</p>
         </button>
     </div>
+    <h2></h2>
+    <p>Clique no botão acima pra iniciar.</p>
 
-    <p>Clique no botão acima pra iniciar.</p> 
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[1]
+        var h2 = document.getElementsByTagName('h2')[0]
+        var button = window.document.getElementById(`button`)
+        button.addEventListener(`click`, function () {
+            var nome = prompt('Qual seu nome?')
+            nome = nome[0].toUpperCase() + nome.slice(1)
+            h2.innerText = `Olá, Seja bem-vindo ${nome}, seu nome tem ${nome.length} letras.`
+            h2.style.visibility = 'visible'
+            p1.style.display = 'none'
+            if(nome.length < 6){
+               document.body.style.backgroundColor='black'
+               document.body.style.color='white'
+            }else{
+                document.body.style.backgroundColor='pink'
+            }
 
-<script>
-    var p1 = window.document.getElementsByTagName('p')[1]
-    var button = window.document.getElementById(`button`)
-    button.addEventListener(`click`,function(){
-        var nome = prompt('Qual seu nome?')
-        nome = nome[0].toUpperCase() + nome.slice(1)
-        p1.innerText=`Olá, Seja bem-vindo ${nome}.`
-    p1.style.fontFamily=`Sans-Seriff`
-    })
+        })
 
 
 
-</script>
+    </script>
 
 
-    
+
 </body>
+
 </html>
