@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATE and TIME</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100dvh;
+            background-color: antiquewhite;
+        }
+
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 70px;
+            height: 40px;
+        }
+
+        h2 {
+            visibility: hidden;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--Write a JavaScript program to display the current day and time
+     in the following format.  
+    Sample Output : Today is : Tuesday. Current time is : 10 PM : 30 : 38 -->
+
+    <h1>Current Date and time: </h1>
+
+    <button id="button">
+        <p>Click</p>
+    </button>
+    <h2 id="demo"></h2>
+    <p>Clique acima para começar</p>
+
+    <script>
+        var p =  document.getElementsByTagName('p')[1]
+        var demo = document.getElementById(`demo`)
+        const d = new Date();
+        document.getElementById("demo").innerHTML = d;
+        var button = document.getElementById(`button`)
+        button.addEventListener(`click`, function(){
+            demo.style.visibility='visible'
+            p.style.visibility='hidden'
+            
+        })
+    
+    
+    </script>
+</body>
+
+</html>
