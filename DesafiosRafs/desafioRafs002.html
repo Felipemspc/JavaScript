@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Output </title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+           align-items: center;
+            background-color: antiquewhite;
+            width: 100vw;
+            height: 100dvh;
+        }
+        button:hover{
+            background-color: rgb(238, 170, 81);
+        }
+        button{
+           
+            border-color: aliceblue;
+            width: 100px;
+            height: 45px;
+        }
+        h2{
+            
+            color: brown;
+            text-decoration: underline;
+            visibility: hidden;
+            font-size: 2rem;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <!--2. Write a JavaScript program to get the current date.  
+Expected Output :
+mm-dd-yyyy, mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy
+    -->
+    <h1>data de hoje:</h1>
+    <button id="button"> Clique </button>
+    <h2 id="resultado"></h2>
+    <p>Clique Acima </p>
+
+    <script>
+
+        const button = document.getElementById('button')
+        const resultado = document.getElementById('resultado')
+        var paragrafo = document.getElementsByTagName('p')[0]
+        button.addEventListener(`click`,function(){
+            const DataDeHoje = getDataDeHoje()
+            resultado.textContent = DataDeHoje
+            resultado.style.visibility='visible' 
+            paragrafo.style.visibility='hidden'
+        })
+    
+        function getDataDeHoje(){
+            const data = new Date();
+            const dia = padZero(data.getDate())
+            const mes = padZero(data.getMonth()+1)
+            const ano = data.getFullYear()
+            const formatodata = `${dia}/${mes}/${ano}`
+            return formatodata
+
+        }
+        function padZero(number){
+            return (number < 10 ? '0' : '') + number
+        }
+            
+     
+
+      
+
+
+    </script>
+
+
+
+
+</body>
+</html>
