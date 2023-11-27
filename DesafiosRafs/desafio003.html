@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finding Area of triangle</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: antiquewhite;
+            width: 100vw;
+            height: 100dvh;
+        }
+        button{
+            width: 150px;
+            height: 60px;
+        }
+        h2{
+            visibility: hidden;
+        }
+
+    </style>
+
+</head>
+<body>
+ <!--3. Write a JavaScript program to find the area of a triangle where three sides are 5, 6, 7.-->   
+
+    <h1>Área De um triângulo Escaleno</h1>
+        <button id="button">
+            Calcule
+        </button>
+    <h2 id="resultado"></h2>
+    <p>Clique Acima</p>
+
+    <script>
+
+        const button = document.getElementById('button')
+        button.addEventListener(`click`,function(){
+            var A = parseInt(prompt('Digite o primeiro Número: '))
+            var B = parseInt(prompt('Digite o segundo Número: ')) 
+            var C = parseInt(prompt('Digite o terceiro e último Número: '))
+            var P = (A + B + C) / 2 
+            var area = Math.sqrt(P * (P - A) * (P - B) * (P - C)).toFixed(2);
+            var resultado = alert(`A área do seu triângulo é: ${area}`)
+            
+        })
+
+        
+
+
+
+    </script>
+
+
+
+</body>
+</html>
