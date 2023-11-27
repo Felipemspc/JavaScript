@@ -7,6 +7,10 @@
     <title>DATE and TIME</title>
     <style>
         body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             width: 100vw;
             height: 100dvh;
             background-color: antiquewhite;
@@ -21,6 +25,8 @@
         }
 
         h2 {
+            color: brown;
+            text-decoration:underline;
             visibility: hidden;
         }
     </style>
@@ -41,16 +47,36 @@
     <p>Clique acima para começar</p>
 
     <script>
-        var p =  document.getElementsByTagName('p')[1]
-        var demo = document.getElementById(`demo`)
-        const d = new Date();
-        document.getElementById("demo").innerHTML = d;
+        
+        const data = new Date();
+        const diaSemana = getDiaSemana(data.getDay())
+        const time = getTime(data)
+        var paragrafo = document.getElementsByTagName('p')[1]
+        var resposta = document.getElementsByTagName('h2')[0]
         var button = document.getElementById(`button`)
-        button.addEventListener(`click`, function(){
-            demo.style.visibility='visible'
-            p.style.visibility='hidden'
-            
+        button.addEventListener(`click`,function(){
+            resposta.innerHTML = (`Hoje é: ${diaSemana}. Horário: ${time}`)
+            resposta.style.visibility='visible'
+            paragrafo.style.visibility='hidden'
         })
+
+       
+
+        function getDiaSemana(dayIndex) {
+            const daysOfWeek = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sextga-feira', 'Sábado'];
+            return daysOfWeek[dayIndex];
+        }
+       
+       
+        
+        function getTime(date) {
+            const hours = date.getHours()
+            const minutes = date.getMinutes()
+            const seconds = date.getSeconds()
+            const amPM = hours >= 12? 'PM':'AM'
+            const HorarioConvertido = hours % 12 || 12 
+            return `${HorarioConvertido}:${minutes}:${seconds} ${amPM}`
+        }
     
     
     </script>
