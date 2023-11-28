@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            
+            width: 100vw;
+            height: 100dvh;
+            background-color: antiquewhite;
+        }
+
+
+
+        input {
+
+            border: 1px solid black;
+            border-radius: 2px;
+        }
+        
+        button {
+            
+            width: 100px;
+            height: 50px;
+            margin: 5px;
+
+
+        }
+
+        .caixa {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 290px;
+            height: 280px;
+            background-color: azure;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Write a JavaScript program to calculate multiplication and division of two numbers (input from the user).-->
+    <div class="caixa">
+        <h1>Multiplicação / Divisão</h1>
+        <form id="calculadora">
+            Número 1: <input type="number" id="num1" required>
+            Número 2: <input type="number" id="num2" required>
+            <button type="button" onclick="Multiplicar()">Multiplicar</button>
+            <button type="button" onclick="Dividir()">Dividir</button>
+        </form>
+        <h2>O Resultado é: <span id="Resultado"></span></h2>
+    </div>
+
+    <script>
+        function Multiplicar() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            var resultado = num1 * num2;
+
+            document.getElementById('Resultado').textContent = resultado;
+        }
+
+        function Dividir() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+
+            if (num2 !== 0) {
+                var resultado = num1 / num2;
+                document.getElementById('Resultado').textContent = resultado;
+            } else {
+                document.getElementById('Resultado').textContent = 'Não é divisível!';
+            }
+        }
+    </script>
+
+
+
+</body>
+
+</html>
