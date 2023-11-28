@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando números</title>
+    <style>
+        body{
+            font: normal 18pt Arial;
+        }
+        input{
+            font: normal 19pt Arial;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Somando Valores</h1>
+
+    <form action="">
+
+         <input type="number" id="num1"> +
+    <input type="number" id="num2">
+        <input type="button" value="Somar" id="button">
+    </form>
+     
+    <h2>O Resultado é:</h2>
+    <p></p>
+
+    <script>
+
+       var button = document.getElementById(`button`)
+
+        button.addEventListener(`click`,function(){
+            var num1 = document.getElementById(`num1`).value
+            var num2 = document.getElementById(`num2`).value
+            var saida = document.getElementsByTagName('p')[0]
+            var resultado = parseFloat(num1)+parseFloat(num2)
+            saida.innerHTML = `A soma entre ${num1} + ${num2} é = <strong>${resultado}<strong>`
+            
+        })
+
+
+
+    </script>
+
+</body>
+
+</html>
