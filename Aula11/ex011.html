@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrangeiro ou Brasileiro</title>
+</head>
+<body>
+    <!--Crie um programa no qual voce pergunte ao usuario que pais ele mora e diga se ele é brasileiro ou é estrangeiro. -->
+    <h1>La migra</h1>
+
+    Nacionalidade:<input type="text" id="nacionalidade">
+    <input type="button" value="Verificar" id="button">
+    <p></p>
+<script>
+    var resposta = document.getElementsByTagName('p')[0]
+    var button = document.getElementById(`button`)
+    button.addEventListener(`click`,function(){
+        var nacionalidade =document.getElementById(`nacionalidade`).value
+        if( nacionalidade == 'Brasileiro'){
+            resposta.innerHTML = `Sua Nacionalidade é <strong>${nacionalidade}</strong>,<br> Bem vindo de volta a casa!`
+        }else{
+            resposta.innerHTML = `Você é <strong>${nacionalidade}</strong>, <br>você está muito distante de casa.`
+        }        
+    })
+
+
+
+</script>
+
+</body>
+</html>
