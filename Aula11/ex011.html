@@ -17,6 +17,8 @@
     var button = document.getElementById(`button`)
     button.addEventListener(`click`,function(){
         var nacionalidade =document.getElementById(`nacionalidade`).value
+        nacionalidade = nacionalidade[0].toUpperCase()+ nacionalidade.slice(1)
+        
         if( nacionalidade == 'Brasileiro'){
             resposta.innerHTML = `Sua Nacionalidade é <strong>${nacionalidade}</strong>,<br> Bem vindo de volta a casa!`
         }else{
