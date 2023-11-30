@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            background-color: antiquewhite;
+        }
+
+        form {
+            background-color: bisque;
+            height: 210px;
+            width: 100px;
+           
+        }
+        input{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            width: 60px;
+        }
+        
+        .button{
+            
+            margin-top: 5px;
+            
+        }
+        h2{
+            font-size: 1rem;
+        }
+        p{
+            text-align: center;
+            
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Média Notas</h1>
+
+    <form>
+        Nota I<input type="number" id="n1">
+        Nota II<input type="number" id="n2">
+        Nota III<input type="number" id="n3">
+        <input type="button" value="Média" class="button" id="button">
+        <h2>Sua Média:</h2>
+        <p>10</p>
+
+    </form>
+    
+    <script>
+    var button = document.getElementById('button')
+    var saída = document.getElementsByTagName('p')[0]
+    button.addEventListener(`click`,function(){
+        var n1 = document.getElementById('n1').value
+        var n2 = document.getElementById('n2').value
+        var n3 = document.getElementById('n3').value
+        var resultado =(parseFloat(n1)+parseFloat(n2)+parseFloat(n3))/3
+        saída.innerHTML=`${resultado.toFixed(1)}`  
+        if(resultado <6 ){
+            saída.style.color='red'
+        }else{
+            saída.style.color='black'
+        }
+    })
+
+
+
+    </script>
+
+
+</body>
+
+</html>
