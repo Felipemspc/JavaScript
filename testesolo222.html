@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inserindo uma img</title>
+    <style>
+        body{
+            
+            background-color: antiquewhite;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div>
+        <button type="button" id="button" onclick="button()">Imagem</button>
+    </div>
+
+    <div id="resultado">
+
+        <p>aperte o botão para aparecer uma imagem.</p>
+
+    </div>
+
+    <script>
+
+        function button(){
+            var resultado = document.getElementById('resultado')
+            var img = document.createElement('img')
+            
+            img.src = 'bebemenino.png'
+            img.style.width='250px'
+            resultado.appendChild(img)
+            resultado.style.visibility ='visible'
+            
+        }
+
+        
+
+
+    </script>
+    
+</body>
+</html>

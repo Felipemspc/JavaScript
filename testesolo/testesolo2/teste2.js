@@ -3,7 +3,7 @@ function verificar() {
   var ano = data.getFullYear();
   var nascimento = document.getElementById("nascimento").value;
   var resultado = document.getElementById("resultado");
-  
+ 
 
   if (nascimento == 0 || nascimento > ano) {
     alert("[ERROR!]Preencha Corretamente os dados!");
@@ -17,7 +17,7 @@ function verificar() {
 
     if (idade <= 10 || idade == 0) {
       resultado.innerHTML = `Detectamos uma criança ${genero} de ${idade} anos.`;
-      
+     
       
     } else if (idade <= 20) {
       resultado.innerHTML = `Detectamos um jovem ${genero} de ${idade} anos.`;
