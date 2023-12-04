@@ -1,0 +1,48 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+    ;
+}
+header{
+    margin: auto;
+    width: 450px;
+    color: aliceblue;
+    background-color: black;
+    text-align: center;
+}
+
+body{
+    
+    width: 100vw;
+    height: 100dvh;
+    background-color: bisque;
+    padding: 10px;
+}
+
+section{
+    text-align: center;
+    border-radius: 25px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.541);
+    padding: 15px;
+    width: 500px;
+    background-color: antiquewhite;
+    margin: auto;
+    font-family: sans-serif;
+    font-size: 1rem;
+}
+div>p{
+    padding: 10px;
+    
+
+}
+#butao{
+    width: 150px;
+    height: 25px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+#butao:hover{
+    background-color: aliceblue;
+}
+
