@@ -6,10 +6,13 @@ while(b <= 7){
     b++
 } */
 
-
+/*
 var b = 1
 
 do{
     console.log(`Passo ${b}`)
+    b++
 
-}while(b <=10 )
+}while(b <=5 )
+*/
+
