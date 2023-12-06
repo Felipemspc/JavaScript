@@ -13,19 +13,33 @@ function contar() {
   if (isNaN(inicio) || isNaN(fim) || isNaN(passo)) {
     alert ("Por favor, insira números válidos.")
     return;
+  }else{
+    resultado.innerHTML = `Contando: <br>`
   }
 
-  //Resetando campo resultado antes de iniciar...
-  resultado.innerHTML = "";
+  
+ 
 
   // checando se passo é negativo ou 0
   if (passo <= 0) {
-    alert ("O passo deve ser um número positivo e diferente de zero.")
-    return;
+    alert ("Passo inválido! CONSIDERANDO PASSO = 1!")
+    passo = 1
   }
-  resultado.innerHTML = "Contando: <br>";
-  for (c = inicio; c <= fim; c += passo) {
-    resultado.innerHTML += `${c} 👉 `;
-  }
+  if( inicio < fim ){
+    //contagem crescente
+      for (c = inicio; c <= fim; c += passo) {
+      resultado.innerHTML += `${c} 👉 `;
+    }
   resultado.innerHTML += "🏁";
+  }else {
+    //contagem regressiva
+    for(c = inicio ; c>=fim ; c -= passo ){
+      resultado.innerHTML += ` ${c} 👉 `
+    }
+    resultado.innerHTML += "🏁";
+  }
+  
+  
+  
+ 
 }
