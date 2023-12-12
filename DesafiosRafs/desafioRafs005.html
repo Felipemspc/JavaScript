@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Days Till Xmas!</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: antiquewhite;
+            width: 100vw;
+            height: 100dvh;
+        }
+
+        h1 {
+            font-size: 4rem;
+        }
+
+        section {
+            font-size: 1.5rem;
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px black;
+            width: 400px;
+            height: 250px;
+            background-color: rgb(247, 43, 43);
+        }
+
+        input {
+            box-shadow: 5px 10px 10px black;
+        }
+
+        input:hover {
+            width: 70px;
+            height: 30px;
+        }
+
+        div#resultado {
+            color: aliceblue;
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Days till Xmas!</h1>
+    <section>
+
+        <div>
+            <p>Push the button to check how many days left to</p>
+            <input type="button" value="XMAS" onclick="xmas()">
+
+        </div>
+
+        <div id="resultado">
+
+        </div>
+    </section>
+
+
+
+    <script>
+
+        function xmas() {
+            let resultado = document.getElementById('resultado')
+            let date = new Date
+            let hoje = date.getDate()
+            let meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
+                'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+            let mes = meses[date.getMonth()];
+            let natal = Number(24);
+            resultado.innerHTML = `Hoje é dia: ${hoje} de ${mes}.<br> Faltam apenas ${natal - hoje} dias para o Natal.`;
+        }
+
+       // xmas();
+
+       // setInterval(xmas, 1000 * 60 * 60 * 24);
+
+
+    </script>
+
+
+</body>
+
+</html>
