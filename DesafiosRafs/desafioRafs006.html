@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random number</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: bisque;
+            width: 100vw;
+            height: 100dvh;
+
+        }
+        section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            background-color: azure;
+            width: 500px;
+            height: 150px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px black;
+        }
+        div>p{
+            
+            width: 450px;
+            text-align: justify;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <!--Write a JavaScript program where the program takes a random integer between 1 and 10, and the user is then prompted to input a guess number. The program displays a message "Good Work" if the input matches the guess number otherwise "Not matched".-->
+    <h1>Guess the number</h1>
+    <section>
+
+        <div>
+           <p>I will Sort a Random number from 1 - 10. try Guess it ;)<br> Push the button bellow when you are ready! </p> 
+            <input type="button" value="Sorting!" onclick="gerar()">
+        </div>
+
+        <div >
+
+
+        </div>
+
+
+
+
+    </section>       
+
+    <script>
+
+        function gerar(){
+        let n = Math.floor(Math.random()* 10)+1
+        let resultado = prompt(`Try to Guess it: `)
+        resultado = parseInt(resultado)
+        if(isNaN(resultado)){
+            alert('Fill in With a valid number!')
+            return
+        }
+
+        if(resultado == n){
+            alert(`Congratz, You did it! The Sorted number was ${n}`)
+            
+        }else{
+            alert(`Oops! Try again...the sorted number was ${n}`)
+            
+        }
+        
+           
+        }
+   </script>
+
+</body>
+</html>
