@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste sozinho!</title>
+    <style>
+        body{
+            background-color: bisque;
+            width: 100vw;
+            height: 100dvh;
+            display: flex;
+            justify-content:  space-around;
+            align-items: center;
+            
+
+        }
+    
+            
+           
+    
+        section#sec1{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            border-radius: 20px;
+            box-shadow: 5px 10px 10px whitesmoke;
+            width: 400px;
+            height: 300px;
+            background-color: rgb(22, 185, 131);
+
+        }
+        section#sec2{
+            color: antiquewhite;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            border-radius: 20px;
+            box-shadow: 5px 10px 10px whitesmoke;
+            width: 400px;
+            height: 300px;
+            background-color: rgba(10, 10, 10, 0.836);
+        }
+
+
+
+    </style>
+</head>
+<body>
+    
+       
+
+
+        <section id="sec1">
+            <div>
+                <p>NÚMERO: <input type="number" name="numero" id="numero"></p>
+                <p><input type="button" value="Calcular Tabuada" onclick="calcular()"></p>
+            </div>
+        </section>
+        <section id="sec2">
+            <div id="resultado">
+                
+            </div>
+        </section>
+    
+
+        <script src="index.js"></script>
+
+</body>
+</html>
