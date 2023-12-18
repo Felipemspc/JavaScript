@@ -28,9 +28,7 @@ function calcular(operadores) {
       break;
     case "dividir":
       if (numeroII !== 0) {
-        resultado.innerHTML += `${numeroI} / ${numeroII} = ${
-          numeroI / numeroII
-        }`;
+        resultado.innerHTML += `${numeroI} / ${numeroII} = ${numeroI / numeroII}`;
       } else {
         resultado.innerHTML = "Não é possível dividir por zero!";
       }
