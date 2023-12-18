@@ -16,3 +16,4 @@ if(amigo.peso > 100){
 }
 */
 console.log(`${amigo.nome} pesa ${amigo.peso}Kg.`)
+

@@ -1,7 +1,7 @@
 
 function gerar(){
     var numero = document.getElementById('numero').value
-    var resultado = document.getElementById('resultado')
+    var resultado = document.querySelector('div.resultado')
     numero =parseInt(numero)
     
     
