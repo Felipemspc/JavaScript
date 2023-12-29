@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 07</title>
+    <style>
+        body {
+            
+            width: 100vw;
+            height: 100dvh;
+            background-color: bisque;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+        header{
+            font-size: 2rem;
+        }
+        section{
+            width: 450px;
+            height: 300px;
+            background-color: aliceblue;
+            border-radius: 15px;
+            padding: 10px;
+        }
+        footer{
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!--7 - Get a random number in the specified range. O usuário informa dois valores e teu programa tem que me dar um número aleatório entre esses dois números-->
+    <header>
+        <p>Desáfio 07</p>
+    </header>
+    <section>
+        <div>
+            <p>Número I: <input type="number" name="numeroI" id="numeroI"></p>
+            <p>Número II: <input type="number" name="numeroII" id="numeroII"></p>
+            <input type="button" value="Sortear Número" onclick="sortear()">
+        </div>
+        <div id="resultado">
+        </div>
+    </section>
+
+    <footer>
+        <p>© Felipe Mattos</p>
+    </footer>
+
+
+    <script>
+
+        function sortear(){
+            let numeroI = document.getElementById('numeroI').value
+            numeroI = parseInt(numeroI)
+            let numeroII = document.getElementById('numeroII').value
+            numeroII = parseInt(numeroII)
+            let resultado = document.getElementById('resultado')
+            resultado.innerHTML = ''
+            resultado.style.color = 'black'
+            if(isNaN(numeroI) || isNaN(numeroII)){
+                resultado.style.color = 'red'
+                resultado.innerHTML = 'Por favor preencha os espaços com números válidos!'
+                return
+            }
+            if(numeroI < numeroII){
+            [numeroI , numeroII] = [numeroII , numeroI]
+
+            }
+            let numeroaleatorio = Math.floor(Math.random() * (numeroII - numeroI +1)) + numeroI
+
+            resultado.innerHTML = `Os números inséridos foram: ${numeroI} e ${numeroII}.<br>`
+            resultado.innerHTML += `O número aleatório entre eles é: ${numeroaleatorio} `
+
+
+
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>
