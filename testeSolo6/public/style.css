@@ -1,0 +1,34 @@
+*{
+    background-color: antiquewhite;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+div{
+    display: flex;
+    flex-direction: column;
+}
+input{
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+}
+input::placeholder{
+    text-align: center;
+}
+
+
+div#areaResultado{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    min-width: 180px;
+}
